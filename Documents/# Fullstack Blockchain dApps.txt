@@ -1,0 +1,88 @@
+# Fullstack Blockchain dApps
+
+This repository contains three decentralized applications (dApps) developed as part of **CST4125 – Blockchain Development Coursework 2**.  
+Each project demonstrates **full-stack development** with smart contracts (Solidity), frontend integration (React.js), API usage, and blockchain workflows.
+
+Projects included:  
+- **ERC20 SPA** – Fungible tokens with React Single Page Application (SPA).  
+- **ERC721 NFT dApp** – Non-Fungible Tokens (NFTs) with IPFS metadata.  
+- **ERC1155 Multi-Token dApp** – Sports-themed multi-token contract supporting batch minting and transfers.  
+
+---
+
+## 🚀 Projects Overview
+
+ 1. ERC20 Single Page Application
+- **Frontend:** React.js + Bulma CSS + Ethers.js  
+- **Backend:** Solidity (OpenZeppelin ERC20), Hardhat  
+- **Features:**
+  - Connect wallet via MetaMask  
+  - Display token metadata (name, symbol, decimals, supply)  
+  - Show balances (pre/post transaction)  
+  - Execute ERC20 transfers  
+  - Capture `Transfer` events in real time  
+- **Run Instructions:**
+  ```bash
+  cd ERC20
+  npm install
+  npx hardhat node
+  npx hardhat run scripts/deploy.js --network localhost
+  cd frontend
+  npm install
+  npm start   # SPA runs on http://localhost:5173
+
+
+2. ERC721 NFT dApp
+
+Frontend: React.js (NFT mint & display UI)
+
+Backend: Solidity (OpenZeppelin ERC721), Hardhat
+
+Features:
+
+Mint NFTs linked to IPFS-hosted metadata
+
+Manage ownership with balanceOf, ownerOf
+
+Transfer NFTs with safeTransferFrom
+
+Approve and query approvals (approve, getApproved)
+
+Ether-based minting with withdraw function
+
+Run Instructions:
+cd ERC721
+npm install
+npx hardhat node
+npx hardhat run scripts/deploy.js --network localhost
+# Optional: run tests
+npx hardhat test
+
+3. ERC1155 Multi-Token dApp
+
+Domain: Sports-themed stock of fungible & non-fungible assets
+
+Frontend: React.js (multi-token UI)
+
+Backend: Solidity (OpenZeppelin ERC1155), Hardhat
+
+Features:
+
+Mint & batch mint fungible and non-fungible tokens
+
+Per-ID price and maxSupply controls
+
+Batch transfers using safeBatchTransferFrom
+
+URI & metadata management with IPFS
+
+Owner can withdraw Ether proceeds
+
+Run Instructions:
+cd ERC1155
+npm install
+npx hardhat node
+npx hardhat run scripts/deploy.js --network localhost
+# Optional: run tests
+npx hardhat test
+
